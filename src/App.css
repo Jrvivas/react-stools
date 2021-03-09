@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+:root {
+  --primary:#f6648C; 
+  --secondary: #CACACA; 
+  --app-ctr-bg-color:#6b0090;
+  --app-ctr-text-color: #ffffff;/*nuevo*/
+  --app-bg-color: #ffffff;/*#2d3c47;*/
+  --app-text-color:rgb(19, 18, 18);/*rgb(117, 117, 117);*/
+  --app-text-Items: #07141d;
+  --app-ctr-bg-degrad: linear-gradient(to right bottom, #e5097f, #c30087, #9b008d, #6b0090, #210990);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.border-primary{
+   background: #007bff00!important;
+   border:1px solid var(--app-ctr-bg-color)
+}
+.bg-primary {
+    background: var(--app-ctr-bg-degrad)!important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar .navbar-brand{
+  color: var(--app-ctr-text-color);
+}
+.navbar .navbar-nav .nav-link{
+  color: var(--app-ctr-text-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-light .navbar-brand{
+  color: var(--app-ctr-bg-color);
+}
+.navbar-light .navbar-nav .nav-link{
+  color: var(--app-ctr-bg-color);
 }
 
-.App-link {
-  color: #61dafb;
+.bg-primary .navbar-brand{
+  color: var(--app-ctr-text-color);
+}
+.bg-primary .navbar-nav .nav-link{
+  color: var(--app-ctr-text-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-light {
+  background-color: #f8f9fa!important;
+  border: 2px solid var(--app-ctr-bg-color);
+  border-radius: 10px;
+}
+
+.bg-bot-float{
+    position: fixed; 
+    bottom: 50px;   
+    right: 50px;
+    width: 80px;
+    height:80px;
+    background: var(--app-ctr-bg-color);
+    color: var(--app-ctr-text-color);
+    border: solid 2px var(--app-ctr-text-color);
+    border-radius: 50%
+}
+.bg-bot-float .txt-bot-float:hover{
+   background: var(--app-ctr-text-color);
+    color:var(--app-ctr-bg-color) ;
+    border: solid 2px var(--app-ctr-bg-color);
+    border-radius: 50%
+}
+
+.txt-bot-float{
+  color: var(--app-ctr-text-color);
+}
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
