@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { ArrowLeftCircle, ArrowRight } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 import { Button,Nav,Navbar,NavDropdown,Form,FormControl } from 'react-bootstrap';
 
 class BarraBusquedaProducto extends Component {
@@ -15,6 +17,7 @@ class BarraBusquedaProducto extends Component {
     render() { 
         return (
             <Navbar  bg="light" expand="lg" variant="light" className='mt-2'>
+              
             <Navbar.Brand href="#home">Producto</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" >
@@ -52,6 +55,12 @@ class BarraBusqueda extends Component {
   render() { 
       return (
           <Navbar  bg="light" expand="lg" variant="light" className='mt-2'>
+            {
+              this.props.pathBack?
+              <Link to={this.props.pathBack} className="btn btn-outline-primary" className="mr-2"><ArrowLeftCircle size='36px'></ArrowLeftCircle></Link>:
+              <span></span>
+            }
+          
           <Navbar.Brand href="#home">{this.props.titulo}</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" >

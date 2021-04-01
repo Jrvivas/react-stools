@@ -55,10 +55,19 @@ export default class Producto{
      * @param {string} idApp 
      * @param {fun} done 
      */
-    static getList(tipo='ALL',done){
+    static getList(tipo='ALL',id=0,done){
         if(tipo=='ALL'){
             //(new Server()).consulta('http://127.0.0.1:4000/products',{},function(rst){
-            (new Server()).get(AppSys.urlBase+'/productos?app_idApp='+AppSys.sesion.idApp+"&id=0",{'_csrf': AppSys.sesion.token},function(rst){   
+            (new Server()).get(AppSys.urlBase+'/productos?app_idApp='+AppSys.sesion.idApp+"&id="+id,{'_csrf': AppSys.sesion.token},function(rst){   
+                    let productos=rst
+                    if(done){
+                        done(productos)
+                    }
+               
+            })
+        }
+        if(tipo=='PRECIOS'){
+             (new Server()).get(AppSys.urlBase+'/productos/precio?app_idApp='+AppSys.sesion.idApp+"&id="+id,{'_csrf': AppSys.sesion.token},function(rst){   
                     let productos=rst
                     if(done){
                         done(productos)

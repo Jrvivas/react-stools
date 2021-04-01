@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import {GeoAlt, GeoFill,Phone, Mailbox, Shop, Telephone} from 'react-bootstrap-icons';
 import AppSys from '../../models/app_sys';
 import Contacto from '../../models/app_model_contacto';
+import BotonesCancelEditDel from '../botones_cancel_edit_del';
 
 
 
@@ -76,15 +77,12 @@ class PageViewContacto extends Component {
 
               </ListGroup>
          
-              <Button variant="outline-primary" className="m-2">Precios Especiales</Button>
+              <Link className='m-2 btn btn-outline-primary' to={'/precio-cliente/'+obj.id}> Precios Especiales</Link>
               <Button variant="outline-primary" className="m-2">Compras</Button>
               <Button variant="outline-primary" className="m-2">Cuenta corriente</Button>
-     
-              <ButtonGroup size="lg" className="mb-2">
-                <Link to='/contacto/' className='btn btn-primary'>Cancelar </Link>
-                <Link to={'/contacto/edit/' + obj.id} className='btn btn-success'>edit </Link>
-                <Link to={'/contacto/delete/' + obj.id} className='btn btn-danger'>Borrar </Link>
-              </ButtonGroup>
+              
+              <BotonesCancelEditDel entidad='contacto' id={obj.id}></BotonesCancelEditDel>
+              
             </Card>
           </Col>
 

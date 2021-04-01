@@ -27,7 +27,7 @@ const BarraNavApp=(props)=>{
             <Nav.Link href="/reporte">reportes</Nav.Link>
             <Nav.Link href="/categoria">categoria</Nav.Link>
             <NavDropdown title="Configuración" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.2">Usuarios</NavDropdown.Item>
+                <NavDropdown.Item href="/user">Usuarios</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">variables</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Sistema</NavDropdown.Item>

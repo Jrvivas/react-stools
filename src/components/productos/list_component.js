@@ -75,12 +75,14 @@ class ItemProducto extends React.Component {
                          <Image src={icono} roundedCircle style={{width:'64px',height:'64px'}}/>
                     </Col>
 
-                    <Col  xs md="auto">
-                        <h4>{producto.nombre}</h4>
+                    <Col xs="7" md="8" lg="8">
+                        <h5>{producto.nombre}</h5>
                         <p>{producto.descripcion}</p>
-                        <span style={{  fontSize: '1.1em', marginRight:'3px' }}>Stock:{producto.stock?producto.stock:0}</span>
-                        <span style={{  fontSize: '1.1em', marginRight:'3px' }}>Unidad:{producto.unidad}</span>
-                        <span style={{ float: 'right', fontSize: '1.5em' }}>${producto.precio}</span>
+                        <div style={{width:'100%'}}>
+                            <span style={{  fontSize: '1.1em', marginRight:'3px' }}>Stock:{producto.stock?producto.stock:0}</span>
+                            <span style={{  fontSize: '1.1em', marginRight:'3px' }}>Unidad:{producto.unidad}</span>
+                            <span style={{ float: 'right', fontSize: '1.5em' }}>${producto.precio}</span>
+                        </div>
                     </Col>
                  
 

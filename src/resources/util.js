@@ -21,4 +21,11 @@ export default class Format{
             return false
         }
     }
+
+    static nowDateTime(){
+        return new Date().toISOString().slice(0, 19).replace('T', ' ');
+    }
+    static nowDate(){
+        return new Date().toISOString().slice(0, 10).replace('T', ' ');
+    }
 }

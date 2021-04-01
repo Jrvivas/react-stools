@@ -3,6 +3,7 @@ import { Card, ListGroup, ListGroupItem, Button, ButtonGroup,Spinner, Row, Col }
 import { Link } from 'react-router-dom';
 import Producto from '../../models/app_model_producto';
 import AppSys from '../../models/app_sys';
+import BotonesCancelEditDel from '../botones_cancel_edit_del';
 
 class PageViewProducto extends Component {
   constructor(props) {
@@ -66,11 +67,8 @@ class PageViewProducto extends Component {
                 <ListGroupItem>Precio:{' $' + pto.precio ? pto.precio : '0.00'}</ListGroupItem>
                 <ListGroupItem>Stock:{' ' + pto.stock ? pto.stock : '-'}</ListGroupItem>
               </ListGroup>
-              <ButtonGroup size="lg" className="mb-2">
-                <Link to='/producto/' className='btn btn-primary'>Cancelar </Link>
-                <Link to={'/producto/edit/' + pto.id} className='btn btn-success'>edit </Link>
-                <Link to={'/producto/delete/' + pto.id} className='btn btn-danger'>Borrar </Link>
-              </ButtonGroup>
+              <BotonesCancelEditDel entidad='producto' id={pto.id}></BotonesCancelEditDel>
+             
             </Card>
           </Col>
           

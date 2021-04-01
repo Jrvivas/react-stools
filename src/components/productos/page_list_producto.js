@@ -11,7 +11,7 @@ class PageListProducto extends Component {
     }
     componentWillMount(){
         //Obtener la lista de productos
-        Producto.getList('ALL',(rst)=>{
+        Producto.getList('ALL',null,(rst)=>{
           this.setState({productos:rst,filtrados:rst,filtro:''})
   
   
